@@ -1,0 +1,11 @@
+Plan:
+
+Start with either a saltwater or freshwater tank.
+
+Then go to the tank size.
+
+Have a database with fish options, shrimp options, and snail options, plant options, and maybe product options
+
+each creature has a size, food input, food type, waste produced, space needed, temperature needed, ph needed, salty/fresh, color, and behavior (for the user to read about)
+
+each plant has light, ph, salty/fresh, temperature, color, and a category for nutrients required

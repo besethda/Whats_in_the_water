@@ -1,0 +1,26 @@
+.container {
+  border: 2px white solid;
+  border-radius: 12px;
+  margin: 12px;
+  color: white;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.name {
+  font-size: 1.6rem;
+}
+
+.background {
+  backdrop-filter: blur(4px);
+  background-color: rgba(27, 75, 42, 0.25);
+  padding: 12px;
+}
+
+.waves {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  object-fit: fill;
+}

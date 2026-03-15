@@ -1,0 +1,18 @@
+.container {
+  flex-grow: 1;
+  display: grid;
+  grid-template: 100% / 20% 60% 20%;
+  padding: 20px;
+}
+
+.aquarium {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  max-height: 900px;
+  object-fit: contain;
+  width: 100%;
+}

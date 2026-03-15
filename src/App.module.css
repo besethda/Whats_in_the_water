@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Zain', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(23deg, rgb(16, 87, 46),rgb(92, 213, 217));
+  display: flex;
+  flex-direction: column;
+}
