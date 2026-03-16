@@ -1,5 +1,5 @@
 .head {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   padding: 7px 20px;
@@ -12,6 +12,21 @@
   svg {
     width: 100%;
     height: 100%;
+    fill: white;
+  }
+}
+
+.addToTank {
+  width: 140px;
+  display: flex;
+}
+
+.plantOption,
+.creatureOption {
+  width: 64px;
+
+  svg {
+    width: 100%;
     fill: white;
   }
 }
