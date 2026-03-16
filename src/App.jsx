@@ -10,14 +10,15 @@ function App() {
 
   const [tankOption, setTankOption] = useState(null)
   const [tankChoices, setTankChoices] = useState(null)
-  const [tankCondition, setTankCondition] = useState({ph: 7, ammonia: 0, nO:0, nH: 0, n:0, k:0, temperature: 21, light: 8})
+  const [tankCondition, setTankCondition] = useState({ph: 7, ammonia: 0, nO:0, nH: 0, n:0, k:0, temperature: 24, light: 8, algae: 0})
+  const [inhabitants, setInhabitants] = useState([])
 
   return (
     <div className={styles.container}>
-      <Header tankChoices={tankChoices}/>
+      <Header tankChoices={tankChoices} setInhabitants={setInhabitants} inhabitants={inhabitants}/>
       {!tankOption ? <Tank setTankOption={setTankOption}/> : 
         !tankChoices ? <TankChoices tankOption={tankOption} setTankChoices={setTankChoices}/> :
-        <Content tankOption={tankOption} tankChoices={tankChoices} tankCondition={tankCondition} setTankCondition={setTankCondition}/>}
+        <Content tankOption={tankOption} tankChoices={tankChoices} tankCondition={tankCondition} setTankCondition={setTankCondition} setInhabitants={setInhabitants} inhabitants={inhabitants}/>}
       <Footer />
     </div>
   )
