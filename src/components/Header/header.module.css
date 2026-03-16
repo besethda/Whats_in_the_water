@@ -1,7 +1,6 @@
 .head {
   display: grid;
-  justify-content: space-between;
-  align-items: center;
+  grid-template: 1fr / 1fr 1fr 1fr;
   padding: 7px 20px;
 }
 
@@ -17,13 +16,20 @@
 }
 
 .addToTank {
-  width: 140px;
+  width: 100%;
   display: flex;
+  justify-content: center;
 }
 
 .plantOption,
 .creatureOption {
-  width: 64px;
+  width: 80px;
+  aspect-ratio: 1;
+  padding: 8px;
+  margin: 0 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 
   svg {
     width: 100%;
@@ -31,7 +37,19 @@
   }
 }
 
+.plantOption:hover,
+.creatureOption:hover {
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.139);
+}
+
+.plant {
+  display: flex;
+  flex-direction: column;
+}
+
 .info {
   font-size: 1.6rem;
+  text-align: right;
   color: white;
 }
