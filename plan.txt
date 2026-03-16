@@ -4,8 +4,11 @@ Start with either a saltwater or freshwater tank.
 
 Then go to the tank size.
 
-Have a database with fish options, shrimp options, and snail options, plant options, and maybe product options
+Have a database with fish options, shrimp options, and snail options, plant options, and maybe product options.
 
-each creature has a size, food input, food type, waste produced, space needed, temperature needed, ph needed, salty/fresh, color, and behavior (for the user to read about)
+Each creature has a size, food input, food type, waste produced, space needed, temperature needed, ph needed, salty/fresh, color, and behavior (for the user to read about)
 
-each plant has light, ph, salty/fresh, temperature, color, and a category for nutrients required
+Each plant has light, ph, salty/fresh, temperature, color, and a category for nutrients required.
+
+
+I can add the animals and plants to the state, and then have exported functions from the utils calculate the tank data based on that.
