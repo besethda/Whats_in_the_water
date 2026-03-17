@@ -1,6 +1,14 @@
+.container {
+  position: absolute;
+}
+
+.aquariumContainer {
+  position: relative;
+}
+
 .aquariumComponent {
   width: 56px;
-  position: relative;
+  position: absolute;
 
   svg {
     width: 100%;
@@ -9,17 +17,49 @@
   }
 }
 
+.critter {
+  z-index: 2;
+}
+
+.fish {
+  animation: swimStill 10s ease-in-out infinite;
+}
+
+.plant {
+  animation: plantStill 6s ease-in-out infinite;
+}
+
+.shrimp {
+  animation: shrimpStill 10s ease-in-out infinite;
+}
+
+.fish .critter {
+  animation: swim 10s ease-in-out infinite;
+}
+
+.plant .critter{
+  animation: plant 6s ease-in-out infinite;
+}
+
+.shrimp .critter {
+  animation: shrimp 10s ease-in-out infinite;
+
+}
+
 .componentDetails {
   position: absolute;
-  bottom: 100%;
+  left: 85%;
+  bottom: 85%;
   display: none;
   flex-direction: column;
-  background-color: rgb(54, 91, 65);
+  background-color: rgba(54, 91, 65, 0.83);
   color: white;
   padding: 8px 14px;
   border-radius: 12px;
+  border-bottom-left-radius: 3px;
   white-space: nowrap;
   font-weight: 200;
+  z-index: 20;
 }
 
 .aquariumComponent:hover .componentDetails {
@@ -47,3 +87,130 @@
 .name {
   font-size: 1.7rem;
 }
+
+.health {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.high {
+  color: red;
+}
+
+.low {
+  color: rgb(0, 183, 255);
+}
+
+.healthy {
+  color: rgb(0, 236, 0);
+}
+
+@keyframes swim {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(34deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(-12deg) rotateY(180deg);
+  }
+  70% {
+    transform: rotate(-25deg) rotateY(180deg) scale(.9);
+  }
+  85% {
+    transform: rotate(-10deg) rotateY(0deg);
+  }
+  99% {
+    transform: rotate(0deg) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes swimStill {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+  20% {
+    transform: translateX(50px) translateY(30px);
+  }
+  40% {
+    transform: translateX(50px) translateY(50px);
+  }
+  70% {
+    transform: translateX(-30px) translateY(80px);
+  }
+  85% {
+    transform: translateX(-30px) translateY(80px);
+  }
+  99% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes plant {
+  0% {
+    transform: scale(1.2) rotate(10deg);
+  }
+  50% {
+    transform: scale(.9) rotate(-10deg);
+  }
+  100% {
+    transform: scale(1.2) rotate(10deg);
+  }
+}
+
+@keyframes plantStill {
+  0% {
+    transform: translateX(10px);
+  }
+  50% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes shrimp {
+  0% {
+    transform: rotate(0);
+  }
+  15% {
+    transform: rotate(15deg) scale(1.1);
+  }
+  30% {
+    transform: rotate(-12deg);
+  }
+  50% {
+    transform: rotate(-25deg) scale(.9);
+  }
+  85% {
+    transform: rotate(-10deg);
+  }
+  99% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes shrimpStill {
+  0% {
+    transform: translateX(0) translateY(0) rotate(0);
+  }
+  20% {
+    transform: translateX(-40px) translateY(-20px);
+  }
+  40% {
+    transform: translateX(-54px) translateY(-34px);
+  }
+  70% {
+    transform: translateX(-30px) translateY(-4px);
+  }
+  85% {
+    transform: translateX(-5px) translateY(10px);
+  }
+  99% {
+    transform: translateX(0) translateY(0);
+  }
+}
+

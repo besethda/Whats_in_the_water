@@ -12,3 +12,11 @@ Each plant has light, ph, salty/fresh, temperature, color, and a category for nu
 
 
 I can add the animals and plants to the state, and then have exported functions from the utils calculate the tank data based on that.
+
+
+
+FACTORS
+
+Fish health: crowding, nitrate, PH, temp
+
+Plant health: Light, Nitrate, PH, temp
