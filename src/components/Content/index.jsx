@@ -34,7 +34,7 @@ const Content = ({ tankOption, tankCondition, inhabitants, setInhabitants, tankS
       <div className={styles.aquarium}>
         <img className={styles.image} src={tankOption === "square" ? `${getImageURL('aquarium2.png')}` : `${getImageURL('aquarium.png')}`} />
         <div className={`${styles.addContainer} ${tankOption === "square" ? styles.square : styles.round}`}>
-          {inhabitants && inhabitants.map((e, i)=> <AquariumComponent type={e.type ? e.type === "fish" ? "fish" : "shrimp" : "plant"} key={e.id} info={e} remove={removeSpecies} tankCondition={tankCondition} crowded={crowded} nitrate={nitrateLevel} setSpecies={setSpecies}/> )}
+          {inhabitants && inhabitants.map((e, i)=> <AquariumComponent type={e.type ? e.type === "fish" ? "fish" : "shrimp" : "plant"} key={e.id} info={e} remove={removeSpecies} tankCondition={tankCondition} crowded={crowded} nitrate={nitrateLevel} setSpecies={setSpecies} inhabitants={inhabitants}/> )}
         </div>
       </div>
       <div className={styles.stats}>

@@ -20,6 +20,15 @@ export const getTemperatureHealth = (organism, currentTankCondition) => {
   else return 'healthy'
 }
 
+export const getLoneliness = (currentInhabitants, organism) => {
+  let range = organism.groupRange
+  let sameSpecies = currentInhabitants.filter(e=> e.name === organism.name)
+  let matchingSpeciesCount = sameSpecies.length
+  if(matchingSpeciesCount > range[1]) return "high"
+  if(matchingSpeciesCount < range[0]) return "low"
+  if(matchingSpeciesCount >= range[0]) return "healthy"
+}
+
 export const getPhHealth = (organism, currentTankCondition) => {
   let phRange = organism.phRange
   let currentPh = currentTankCondition.ph
