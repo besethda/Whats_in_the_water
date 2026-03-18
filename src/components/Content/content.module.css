@@ -82,6 +82,21 @@
   color: white;
 }
 
+.algae {
+  color: white;
+  width: 58px;
+  background-color: rgba(27, 75, 42, 0.34);
+  border-radius: 12px;
+  max-width: 230px;
+  font-size: 1.4rem;
+  padding: 8px 18px;
+
+  svg{
+    fill:white;
+    width: 100%;
+  }
+}
+
 .addContainer {
   position: absolute;
   border-radius: 50%;

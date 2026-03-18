@@ -30,40 +30,41 @@ export const getLeftovers = (currentInhabitants) => {
     return 0
   }
   let result = Math.floor(totalWaste - maxNitrateUsage)
+  console.log(result)
   return result < 0 ? 0 : result
 }
 
 export const getAlgaeChances = (currentInhabitants, currentTankCondition) => {
-  let risk = 0
+  let risk
   let leftoverWaste = getLeftovers(currentInhabitants)
-  switch(leftoverWaste){
-    case (leftoverWaste > 0):
-      risk = 20
-      break
-    case (leftoverWaste >= 2):
-      risk = 40
-      break
-    case (leftoverWaste >= 5):
-      risk = 60
-      break
-    case (leftoverWaste >= 8):
+  console.log(leftoverWaste)
+  switch(true){
+    case (leftoverWaste >= 10):
       risk = 80
       break
-    case (leftoverWaste >= 10):
-      risk = 100
+    case (leftoverWaste >= 8):
+      risk = 60
+      break
+    case (leftoverWaste >= 5):
+      risk = 40
+      break
+    case (leftoverWaste >= 2):
+      risk = 20
       break
     default:
     risk = 0
   }
+  console.log(risk)
   let temp = currentTankCondition.temperature
   if (temp < 17) return 0
   if (currentTankCondition.light < 6) return 0
   let final
   if (temp >= 24) {
-    final = (leftoverWaste * (1+((temp-24) * .2)))
+    final = (risk * (1+((temp-24) * .2)))
   } else {
-    final = (leftoverWaste / (1+((24-temp) * .2)))
+    final = (risk / (1+((24-temp) * .2)))
   }
+  console.log(final)
   return Math.floor(final < 0 ? 0 : final)
 }
 
