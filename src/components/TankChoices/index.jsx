@@ -1,10 +1,9 @@
 import { useState } from "react";
 import styles from "./tank-choices.module.css"
 
-const TankChoices = ({setTankChoices}) => {
+const TankChoices = ({setTankChoices, setTankSize, tankSize}) => {
 
   const [waterType, setWaterType] = useState(null)
-  const [tankSize, setTankSize] = useState(null)
 
   const changeWaterType = (type) => {
     setWaterType(type)

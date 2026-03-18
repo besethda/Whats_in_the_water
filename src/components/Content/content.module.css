@@ -82,18 +82,29 @@
   color: white;
 }
 
-.algae {
+.dataContainer {
+  display: flex;
+}
+
+.algae,
+.capacity {
+  width: 90px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 12px 20px;
+  margin-right: 0;
   color: white;
-  width: 58px;
+  font-size: 1.4rem;
   background-color: rgba(27, 75, 42, 0.34);
   border-radius: 12px;
-  max-width: 230px;
-  font-size: 1.4rem;
-  padding: 8px 18px;
+  padding: 12px 16px;
 
-  svg{
-    fill:white;
+  svg {
     width: 100%;
+    stroke: white;
+    fill: white;
+    padding: 5px;
   }
 }
 
