@@ -31,7 +31,7 @@ export const getLoneliness = (currentInhabitants, organism) => {
 
 export const getPhHealth = (organism, currentTankCondition) => {
   let phRange = organism.phRange
-  let currentPh = currentTankCondition.ph
+  let currentPh = parseFloat(currentTankCondition.ph)
   if(currentPh > phRange[1]) return("high")
   if(currentPh < phRange[0]) return("low")
   else return "healthy"
@@ -112,4 +112,28 @@ export const getAlgaeChances = (currentInhabitants, currentTankCondition) => {
     final = (risk / (1+((24-temp) * .2)))
   }
   return Math.floor(final < 0 ? 0 : final)
+}
+
+export const getSwimmingArea = (shape, window, type) => {
+  if(type=== "plant") {
+    if(shape === "square") {
+      let xPos = Math.floor(Math.random() * (window / 2.2)) - (window / 4)
+      let yPos = Math.floor(Math.random() * (window / 30)) - (window / 400 - (window / 14))
+      return {x: xPos, y: yPos}
+    } else {
+      let xPos = Math.floor(Math.random() * (window / 3.7)) - (window / 7)
+      let yPos = Math.floor(Math.random() * (window / 30)) - (window / 400 - (window / 14))
+      return {x: xPos, y: yPos}
+    }
+  } else {
+    if (shape === "square") {
+      let xPos = Math.floor(Math.random() * (window / 2.3)) - (window / 4.1)
+      let yPos = Math.floor(Math.random() * (window / 7)) - (window / 10)
+      return {x: xPos, y: yPos}
+    } else {
+      let xPos = Math.floor(Math.random() * (window / 3)) - (window / 5.3)
+      let yPos = Math.floor(Math.random() * (window / 6)) - (window / 7)
+      return {x: xPos, y: yPos}
+    }
+  }
 }

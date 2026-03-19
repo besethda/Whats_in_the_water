@@ -26,6 +26,10 @@
   }
 }
 
+.active .critter {
+  fill: rgb(0, 238, 32)
+}
+
 .shadow {
   position: absolute;
   top: 45%;

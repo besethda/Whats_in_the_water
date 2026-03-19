@@ -20,21 +20,6 @@
   width: 100%;
 }
 
-.measurements {
-  padding: 20px;
-}
-
-.measurement {
-  background-color: rgba(27, 75, 42, 0.25);
-  display: flex;
-  flex-direction: column;
-  color: white;
-  border-radius: 12px;
-  padding: 8px 20px;
-  margin: 7px 0;
-  max-width: 230px;
-}
-
 .name {
   font-size: 1.8rem;
 }
@@ -43,70 +28,37 @@
   font-size: 1.4rem;
 }
 
+.dataDiv {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+
 .stats {
+  max-width: 240px;
+  min-width: 155px;
   display: flex;
   flex-direction: column;
-  justify-content: baseline;
   align-items: end;
-  padding: 20px;
+  padding: 20px 10px;
 }
 
 .basics {
-  width: fit-content;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: rgba(27, 75, 42, 0.34);
   border-radius: 12px;
-  max-width: 230px;
-}
-
-.temp,
-.light {
-  width: 58px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 12px 0;
-
-  svg {
-    width: 100%;
-    stroke: white;
-    fill: white;
-    padding: 5px;
-  }
-}
-
-.tempData,
-.lightData {
-  font-size: 1.5rem;
-  color: white;
+  margin: 5px 0;
+  padding: 2px 0;
 }
 
 .dataContainer {
   display: flex;
-}
-
-.algae,
-.capacity {
-  width: 90px;
-  display: flex;
-  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 12px 20px;
-  margin-right: 0;
-  color: white;
-  font-size: 1.4rem;
-  background-color: rgba(27, 75, 42, 0.34);
-  border-radius: 12px;
-  padding: 12px 16px;
-
-  svg {
-    width: 100%;
-    stroke: white;
-    fill: white;
-    padding: 5px;
-  }
+  margin: 5px 0;
 }
 
 .addContainer {
