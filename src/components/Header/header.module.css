@@ -89,10 +89,6 @@
   margin: 3px 0;
 }
 
-.line:last-of-type {
-  display: none;
-}
-
 .active {
   display: flex;
 }

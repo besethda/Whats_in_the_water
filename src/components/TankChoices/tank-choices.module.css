@@ -27,12 +27,18 @@
   color: white;
   text-align: center;
   margin: 0 12px;
+  margin-top: 18px;
   cursor: pointer;
   transition: .2s ease-in-out;
 
   svg {
     width: 90%;
+    fill: white;
   }
+}
+
+.type {
+  font-size: 1.9rem;
 }
 
 .activeType {
