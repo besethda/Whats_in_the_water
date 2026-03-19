@@ -3,6 +3,7 @@
   display: grid;
   grid-template: 100% / 20% 60% 20%;
   padding: 20px;
+  z-index: 2;
 }
 
 .aquarium {
@@ -51,7 +52,7 @@
 }
 
 .basics {
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

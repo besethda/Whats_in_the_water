@@ -77,7 +77,6 @@ export const getLeftovers = (currentInhabitants) => {
     return 0
   }
   let result = Math.floor(totalWaste - maxNitrateUsage)
-  console.log(result)
   return result < 0 ? 0 : result
 }
 
@@ -103,7 +102,6 @@ export const getAlgaeChances = (currentInhabitants, currentTankCondition) => {
     default:
       risk = 0
   }
-  console.log(risk)
   let temp = currentTankCondition.temperature
   if (temp < 17) return 0
   if (currentTankCondition.light < 6) return 0
@@ -113,6 +111,5 @@ export const getAlgaeChances = (currentInhabitants, currentTankCondition) => {
   } else {
     final = (risk / (1+((24-temp) * .2)))
   }
-  console.log(final)
   return Math.floor(final < 0 ? 0 : final)
 }

@@ -10,7 +10,7 @@ function App() {
 
   const [tankOption, setTankOption] = useState(null)
   const [tankChoices, setTankChoices] = useState(null)
-  const [tankCondition, setTankCondition] = useState({ph: 7, ammonia: 0, nO:0, nH: 0, n:0, k:0, temperature: 24, light: 5, algae: 0})
+  const [tankCondition, setTankCondition] = useState({ph: 7, temperature: 24, light: 8, algae: 0})
   const [inhabitants, setInhabitants] = useState([])
   const [tankSize, setTankSize] = useState(null)
 

@@ -4,8 +4,8 @@ import { getTemperatureHealth, getLightLevelHealth, getPhHealth, getLoneliness }
 const AquariumComponent = ({ type, info, remove, tankCondition, crowded, nitrate, inhabitants }) => {
 
   let width = window.innerWidth
-  let x = Math.floor(Math.random() * (width / 2.3)) - (width / 4)
-  let y = Math.floor(Math.random() * (width / 5.5)) - (width / 10)
+  let x = Math.floor(Math.random() * (width / 2.3)) - (width / 4.1)
+  let y = Math.floor(Math.random() * (width / 7)) - (width / 10)
   let xPlant = Math.floor(Math.random() * (width / 2.2)) - (width / 4)
   let yPlant = Math.floor(Math.random() * (width / 30)) - (width / 400 - (width / 14))
 
@@ -13,7 +13,7 @@ const AquariumComponent = ({ type, info, remove, tankCondition, crowded, nitrate
   let phHealth = getPhHealth(info, tankCondition)
   let lightHealth = (type === "plant" ? getLightLevelHealth(info, tankCondition) : null)
   let nitrateDanger = nitrate > 0 ? "high" : "healthy"
-  let loneliness = inhabitants ? getLoneliness(inhabitants, info) : "healthy"
+  let loneliness = inhabitants ? type !== "plant" ? getLoneliness(inhabitants, info) : "healthy" : null
 
   return (
     <div className={styles.container}>

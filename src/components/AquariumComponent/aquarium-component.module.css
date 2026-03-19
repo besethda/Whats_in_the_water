@@ -1,5 +1,10 @@
 .container {
   position: absolute;
+  z-index: 10;
+}
+
+.container:hover {
+  z-index: 1000;
 }
 
 .aquariumContainer {
@@ -30,10 +35,6 @@
   background-color: rgba(0, 0, 0, 0.069);
   box-shadow: 0 0 9px 5px rgba(0, 0, 0, 0.065);
   border-radius: 50%;
-}
-
-.critter {
-  z-index: 2;
 }
 
 .fish {
@@ -74,7 +75,6 @@
   border-bottom-left-radius: 3px;
   white-space: nowrap;
   font-weight: 200;
-  z-index: 20;
 }
 
 .aquariumComponent:hover .componentDetails {

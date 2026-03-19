@@ -1,26 +1,70 @@
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border: 2px white solid;
   border-radius: 12px;
   margin: 12px;
   color: white;
-  position: relative;
-  overflow-y: hidden;
+  width: 82px;
+  height: fit-content;
 }
 
 .name {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  margin: 8px 0;
 }
 
-.background {
-  backdrop-filter: blur(4px);
-  background-color: rgba(27, 75, 42, 0.25);
-  padding: 12px;
+.dataText {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  font-size: 1.2rem;
 }
 
-.waves {
-  position: absolute;
-  top:0;
-  left: 0;
+.input {
+  display: flex;
+  flex-wrap: nowrap;
   width: 100%;
-  object-fit: fill;
+  justify-content: center;
+}
+
+.dataSpan {
+  padding: 4px 0;
+  font-size: 1.2rem;
+  width: 50%;
+}
+
+.phSpan {
+  display: none;
+}
+
+.phData {
+  text-align: center;
+}
+
+input {
+  outline: none;
+  background: transparent;
+  border: none;
+  text-decoration: underline;
+  color: white;
+  font-family: 'Zain', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 50%;
+  text-align: right;
+  height: fit-content;
+  font-size: 1.2rem;
+  overflow: hidden;
+  font-weight: 300;
+}
+
+input::placeholder {
+  color: white;
+}
+
+.container svg {
+  width: 58px;
+  height: 58px;
+  fill: white;
+  margin: 6px 0;
 }
