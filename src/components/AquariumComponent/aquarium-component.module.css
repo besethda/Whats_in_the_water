@@ -125,6 +125,16 @@
   color: rgb(0, 236, 0);
 }
 
+@media (orientation: portrait) {
+  .aquariumComponent {
+    width: 36px;
+  }
+
+  .aquariumComponent:hover .componentDetails {
+    display: none;
+  }
+}
+
 @keyframes swim {
   0% {
     transform: rotate(0);

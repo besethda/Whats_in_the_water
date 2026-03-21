@@ -16,3 +16,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+@media (orientation: portrait) {
+  .container {
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+}

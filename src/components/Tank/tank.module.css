@@ -34,3 +34,17 @@
   background-color: rgba(255, 255, 255, 0.139);
   border-radius: 12px;
 }
+
+@media (orientation: portrait) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .options {
+    height: fit-content;
+  }
+
+  .imgOption {
+    height: 12vh;
+  }
+}

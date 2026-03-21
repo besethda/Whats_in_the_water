@@ -8,7 +8,7 @@
   margin: 2%;
   color: white;
   width: 45%;
-  height: fit-content;
+  height: 100%;
 }
 
 .name {
@@ -67,4 +67,27 @@ input::placeholder {
   aspect-ratio: 1;
   fill: white;
   margin: 6px 0;
+}
+
+@media (orientation: portrait) {
+  .container {
+    width: clamp(30px, 45%, 80px );
+  }
+
+  .name {
+    font-size: .9rem;
+  }
+
+  .dataText {
+    font-size: .9rem;
+  }
+
+  .dataSpan {
+    font-size: .9rem;
+    padding: 6px 0;
+  }
+
+  input {
+    font-size: .9rem;
+  }
 }

@@ -75,3 +75,26 @@
 .healthy {
   color: rgb(0, 236, 0);
 }
+
+@media (orientation: portrait) {
+  .container {
+    max-width: 100%;
+    max-height: none;
+    height: 100%;
+  }
+
+  .head {
+    height: 35px;
+  }
+
+  .top {
+    flex-direction: row;
+    align-items: first baseline;
+    height: 100%;
+
+    svg {
+      height: 80%;
+      width: fit-content;
+    }
+  }
+}

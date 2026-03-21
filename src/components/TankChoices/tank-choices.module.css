@@ -89,3 +89,25 @@
 .continue:hover {
   background-color: rgba(90, 202, 167, 0.366);
 }
+
+@media (orientation: portrait){
+  .container {
+    flex-grow: 1;
+  }
+
+  .head {
+    font-size: 1.8rem;
+  }
+
+  .sizeContainer {
+    width: 100%;
+  }
+
+  .type {
+    font-size: 1.4rem;
+  }
+
+  .size {
+    font-size: 1.3rem ;
+  }
+}
