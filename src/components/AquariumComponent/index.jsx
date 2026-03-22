@@ -1,7 +1,7 @@
 import styles from "./aquarium-component.module.css"
 import { getTemperatureHealth, getLightLevelHealth, getPhHealth, getLoneliness, getSwimmingArea } from "../../../utils/functions";
 
-const AquariumComponent = ({ type, info, remove, tankCondition, crowded, nitrate, inhabitants, tankOption, setFeaturedSpecies, featuredSpecies}) => {
+const AquariumComponent = ({ type, info, remove, tankCondition, crowded, nitrate, inhabitants, tankOption, setFeaturedSpecies, featuredSpecies, }) => {
 
   let constraints = getSwimmingArea(tankOption, (window.innerWidth), type)
 
@@ -12,7 +12,7 @@ const AquariumComponent = ({ type, info, remove, tankCondition, crowded, nitrate
   let loneliness = inhabitants ? type !== "plant" ? getLoneliness(inhabitants, info) : "healthy" : null
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} >
       <div className={styles.aquariumContainer} style={{ transform: `translate(${constraints.x}px, ${constraints.y}px)` }}>
         <div className={`${styles.aquariumComponent} ${featuredSpecies !==null && info.id === featuredSpecies.id ? styles.active : styles.inactive} ${type === "plant" ? styles.plant : type === "fish" ? styles.fish : styles.shrimp}`}>
           <div className={styles.shadow}></div>
