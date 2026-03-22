@@ -32,7 +32,7 @@
     width: 10%;
     aspect-ratio: 1;
     stroke: rgb(0, 149, 151);
-    margin-bottom: 4px;
+    margin-bottom: 15%;
     cursor: pointer;
   }
 }
@@ -40,6 +40,7 @@
 .title {
   font-size: 1.5rem;
   width: 85%;
+  line-height: 100%;
 }
 
 .line {
@@ -85,6 +86,10 @@
 
   .head {
     height: 35px;
+  }
+
+  .title {
+    font-size: 1.3rem;
   }
 
   .top {
