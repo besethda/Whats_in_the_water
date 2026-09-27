@@ -40,12 +40,10 @@ waste produced and, for plants, light and nutrient needs. From that the app work
 
 ## What I learned
 
-- Modelling real-world data. Each species is an object with ranges instead of single values,
-  which made the health checks much simpler.
-- Keeping logic out of components, so the calculations can be read and changed in one place
-- Deriving values like nitrate and algae risk from state instead of storing them
-- Positioning and animating elements inside two different tank shapes
-
+- More about react hooks, memoing, hydration, and passing props (this was one of my first react projects)
+- How to organize data better- making the tank simulation part was hard, but rewarding.
+- Working with SVGs
+  
 ## Running locally
 
 ```bash
