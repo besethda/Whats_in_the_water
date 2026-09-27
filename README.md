@@ -1,16 +1,54 @@
-# React + Vite
+# What's in the Water
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An aquarium planner. Pick a tank, stock it with fish, shrimp and plants, and see whether
+everything in it can live together, before you buy anything.
 
-Currently, two official plugins are available:
+**Live demo:** [whats-in-the-water.vercel.app](https://whats-in-the-water.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![A stocked 112L freshwater tank](screenshots/tank.jpg)
 
-## React Compiler
+## How it works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Choose a tank shape, salt or fresh water, and a size from 12L to 375L
+2. Add fish, shrimp and plants from the menus. They appear and swim around in the tank.
+3. Adjust temperature, pH and light hours and watch how the tank reacts
 
-## Expanding the ESLint configuration
+![Tank setup screens](screenshots/setup.jpg)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## What the app calculates
+
+Every species has its own data: size, space needed, temperature and pH range, group size,
+waste produced and, for plants, light and nutrient needs. From that the app works out:
+
+- **Crowding:** the minimum space of every animal added up against the tank size
+- **Nitrate:** waste from the animals minus what the plants take up
+- **Algae risk:** based on leftover nitrate, then scaled up or down by temperature and light
+- **Per-species health:** whether temperature, pH, light, group size and space suit each
+  species. Click any fish or plant to see its checks.
+
+![Species details and health checks](screenshots/species.jpg)
+
+<img src="screenshots/mobile.jpg" alt="The planner on mobile" width="260">
+
+## Tech stack
+
+- React 19 with Vite
+- CSS Modules
+- Inline SVG icons
+- No backend: species data lives in `data/data.js`, and the calculations are plain functions
+  in `utils/functions.js`
+
+## What I learned
+
+- Modelling real-world data. Each species is an object with ranges instead of single values,
+  which made the health checks much simpler.
+- Keeping logic out of components, so the calculations can be read and changed in one place
+- Deriving values like nitrate and algae risk from state instead of storing them
+- Positioning and animating elements inside two different tank shapes
+
+## Running locally
+
+```bash
+npm install
+npm run dev
+```
